@@ -8,7 +8,7 @@ class Modal extends Component { //or we could use a PureComponent, but we dont r
 
     //this could be a function component, doesn't have to be a class
     shouldComponentUpdate(nextProps, nextState) {
-        return nextProps.show !== this.props.show;
+        return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
     }
 
     componentDidUpdate (){
