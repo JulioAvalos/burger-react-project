@@ -8,11 +8,57 @@ import classes from './ContactData.module.css';
 
 class ContactData extends Component {
     state = {
-        name: '',
-        email: '',
-        address: {
-            street: '',
-            postalCode: ''
+        orderForm: {
+            name: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'text',
+                    placeholder: 'Your name'
+                },
+                value: ''
+            },
+            street: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'text',
+                    placeholder: 'Street'
+                },
+                value: ''
+            },
+            zipCode: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'text',
+                    placeholder: 'ZIP'
+                },
+                value: ''
+            },
+            country: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'text',
+                    placeholder: 'Country'
+                },
+                value: ''
+            },
+            email: {
+                elementType: 'input',
+                elementConfig: {
+                    type: 'text',
+                    placeholder: 'Your E-Mail'
+                },
+                value: ''
+            },
+            deliveryMethod: {
+                elementType: 'select',
+                elementConfig: {
+                    options: [
+                        {value: 'fastest', displayValue: 'Fastest'},
+                        {value: 'cheapest', displayValue: 'Cheapest'}
+                    ]
+                },
+                value: ''
+            },
         },
         loading: false
     }
@@ -24,18 +70,7 @@ class ContactData extends Component {
         const order = {
             ingredients: this.props.ingredients,
             // as sample: for production, should calculate the price on the server, because users can manipulate it!
-            price: this.props.price, 
-            customer: {
-                name: 'Julio Avalos',
-                address: {
-                    street: 'testStreet2',
-                    zipCode: '00527',
-                    country: 'El Salvador'
-                },
-                email: 'test@test.com'
-            },
-            deliveryMethod: 'fastest'
-
+            price: this.props.price
         };
         axios.post('/orders.json', order)
             .then(response => {
@@ -50,7 +85,7 @@ class ContactData extends Component {
     render (){
         let form = (
             <form>
-                <Input inputtype="input" type="text" name="name" placeholder="Your name" />
+                <Input elementType="..." elementConfig="..." value="..."/>
                 <Input inputtype="input" type="email" name="email" placeholder="Your Mail" />
                 <Input inputtype="input" type="text" name="street" placeholder="Street" />
                 <Input inputtype="input" type="text" name="postal" placeholder="Postal Code" />
