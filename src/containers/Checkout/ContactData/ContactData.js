@@ -23,7 +23,7 @@ class ContactData extends Component {
         const order = {
             ingredients: this.props.ingredients,
             // as sample: for production, should calculate the price on the server, because users can manipulate it!
-            price: this.props.totalPrice, 
+            price: this.props.price, 
             customer: {
                 name: 'Julio Avalos',
                 address: {
