@@ -9,12 +9,16 @@ const input = (props) => {
         case ( 'input' ): 
             inputElement = <input 
                 className={classes.InputElement} 
-                {...props.elementConfig} value={props.value} onChange={props.changed}/>;
+                {...props.elementConfig} 
+                value={props.value} 
+                onChange={props.changed}/>;
             break;
         case ( 'textarea' ):
             inputElement = <textarea 
                 className={classes.InputElement} 
-                {...props.elementConfig} value={props.value} onChange={props.changed}/>;
+                {...props.elementConfig} 
+                value={props.value} 
+                onChange={props.changed}/>;
             break;
         case ( 'select' ):
             inputElement = (
@@ -32,8 +36,9 @@ const input = (props) => {
         default: 
             inputElement = <input 
                 className={classes.InputElement} 
-                {...props.elementConfig} value={props.value} 
-                onChange={props.changed}/>;
+                {...props.elementConfig} 
+                value={props.value} 
+                onChange={props.changed} />;
     }
 
     return (        
