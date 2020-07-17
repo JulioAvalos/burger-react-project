@@ -116,7 +116,7 @@ class ContactData extends Component {
                 this.setState({loading: false});
             });
     }
-    installing the redux devtools
+    //installing the redux devtools
     checkValidity (value, rules) {
         let isValid = true;
         if(!rules) {
