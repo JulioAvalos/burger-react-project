@@ -1,4 +1,4 @@
-import * as actionTypes from './actions';
+import * as actionTypes from '../actions/actions';
 
 const initialState = {
     ingredients: {
@@ -22,7 +22,7 @@ const reducer = (state = initialState, action) => {
     switch(action.type) {
         case actionTypes.ADD_INGREDIENT: 
             return {
-                ...state,
+                ...state,installing the redux devtools
                 ingredients: {
                     ...state.ingredients,
                     [action.ingredientName]:state.ingredients[action.ingredientName] + 1
