@@ -42,7 +42,7 @@ class BurgerBuilder extends Component {
     }
 
     purchaseContinueHandler = () => {
-        this.props.history.push('/checkoutinstalling the redux devtools');
+        this.props.history.push('/checkout');
     }
 
     render(){
