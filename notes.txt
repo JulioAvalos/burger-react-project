@@ -1,0 +1,8 @@
+Tarea:
+
+
+1. leer el articulo de JWT -> https://blog.angular-university.io/angular-jwt/
+
+2. Investigar lo de Options (porque los navegadores lo envian)
+- https://stackoverflow.com/questions/29954037/why-is-an-options-request-sent-and-can-i-disable-it
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
