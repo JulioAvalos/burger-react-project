@@ -54,10 +54,8 @@ export const auth = (email, password, isSignup) => {
         if(!isSignup){
             url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=' + webApiKey;
         }
-        console.log(url, isSignup, authData);
         axios.post(url, authData)
         .then(response => {
-            console.log(response);
             const expirationDate = new Date(new Date().getTime() + response.data.expiresIn * 1000);
             localStorage.setItem('token', response.data.idToken);
             localStorage.setItem('expirationDate', expirationDate);

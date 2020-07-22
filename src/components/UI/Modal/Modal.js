@@ -5,16 +5,10 @@ import Aux from '../../../hoc/Auxiliary/Auxiliary';
 import Backdrop from '../Backdrop/Backdrop';
 
 class Modal extends Component { //or we could use a PureComponent, but we dont really need to do many props checks in this one
-
     //this could be a function component, doesn't have to be a class
     shouldComponentUpdate(nextProps, nextState) {
         return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
     }
-
-    componentDidUpdate (){
-        console.log('[Modal] did update');
-    }
-
     render () {
         return (
             <Aux>
